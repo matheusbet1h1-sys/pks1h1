@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-g" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APOLO Chain Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'krypton-gray': {
+                '900': '#0A0A0A', // Darker background
+                '800': '#1A1A1A',
+                '700': '#2A2A2A',
+                '600': '#3D3D3D',
+                '500': '#707070',
+                '400': '#999999',
+                '300': '#b5b5b5'
+              },
+              'krypton-blue': {
+                '500': '#00A2FF',
+                '600': '#007BFF'
+              },
+              'krypton-purple': '#8E44AD',
+              'krypton-accent': '#F39C12',
+              'krypton-success': '#2ECC71',
+              'krypton-danger': '#E74C3C',
+              'light': {
+                'bg': '#FFFFFF',
+                'card': '#E8EAED',
+                'border': '#E1E8ED',
+                'text-primary': '#0F1419',
+                'text-secondary': '#536471'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            },
+            animation: {
+                'fade-in': 'fade-in 0.5s ease-out forwards',
+                'zoom-in': 'zoom-in 0.3s ease-out forwards',
+                'pulse-glow': 'pulse-glow 2s infinite ease-in-out',
+            },
+            keyframes: {
+                'fade-in': {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+                'zoom-in': {
+                    '0%': { transform: 'scale(0.95)' },
+                    '100%': { transform: 'scale(1)' },
+                },
+                'pulse-glow': {
+                  '0%, 100%': { 'box-shadow': '0 0 5px #00A2FF, 0 0 10px #00A2FF' },
+                  '50%': { 'box-shadow': '0 0 20px #007BFF, 0 0 30px #007BFF' }
+                }
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js",
+    "firebase/storage": "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.5.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-light-bg text-light-text-primary dark:bg-krypton-gray-900 dark:text-white font-sans transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
